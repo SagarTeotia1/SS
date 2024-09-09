@@ -20,12 +20,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* cursor: url(); */
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
 }
+
+html::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-button{
+  background-color: rgb(255, 255, 255);
+}
+
+.txt-rotate{
+  color: rgb(97, 0, 194);
+}
+
+.ss{
+  color: rgb(234,205,69);
+}
+
+
+
 
 body {
   font-weight: 400;
@@ -141,6 +161,7 @@ span.navbar-text {
 }
 .social-icon a:hover::before {
     transform: scale(1);
+
 }
 .social-icon a img {
 	width: 40%;
@@ -344,7 +365,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: transparent;
 }
 .project h2 {
 	font-size: 45px;
@@ -615,4 +636,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+.logo>img{
+  height: 8vw;
+  width: auto;
+}
+
+.mouse-follower {
+  z-index: 99999;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none; 
+  transition: transform 1000s linear; 
+  transform: translate(-50%, -50%); 
+}
+
+.spline-background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: fit-content;
+  z-index: -1;
 }

@@ -7,6 +7,11 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+import React, { useEffect } from 'react';
+
+
+
+
 export const Projects = () => {
 
   const projects = [
@@ -43,6 +48,7 @@ export const Projects = () => {
   ];
 
   return (
+    
     <section className="project" id="projects">
       <Container>
         <Row>
