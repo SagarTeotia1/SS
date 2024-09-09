@@ -58,7 +58,10 @@ export const Banner = () => {
                 {/* <span className="tagline">Welcome to StartupSphere!</span> */}
                 <h1>{`Welcome to StartupSphere `} <span className="txt-rotate" dataPeriod="200" data-rotate='[ "a Society", "a Community" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Startup Sphere Society is a college community fostering innovation, networking, and entrepreneurship through events, workshops, and mentorship opportunities.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <a href="https://linktr.ee/StartupShere" target="_blank">
+                  <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </a>
+
               </div>}
             </TrackVisibility>
           </Col>
