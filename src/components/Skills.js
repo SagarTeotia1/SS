@@ -1,10 +1,13 @@
 import EM from "../assets/icons/Event.png";
-import meter2 from "../assets/img/meter2.svg";
 import Tech from "../assets/icons/tech.png";
 import SM from "../assets/icons/social-media.png";
 import photo from "../assets/icons/photo.png";
-// import Tech from "../assets/icons/tech.png";
-import meter3 from "../assets/img/meter3.svg";
+import content from "../assets/icons/Content.png";
+import Marketing from "../assets/icons/marketing.png";
+import skill from "../assets/icons/skill.png";
+import Monitization from "../assets/icons/pricing.png";
+import rnd from "../assets/icons/r7d.png";
+import pr from "../assets/icons/pr.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -47,12 +50,12 @@ export const Skills = () => {
                                 Management</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={skill} alt="Image" />
                                 <h5>Startup
                                 Development</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={content} alt="Image" />
                                 <h5>Content
                                 Creation</h5>
                             </div>
@@ -62,22 +65,22 @@ export const Skills = () => {
                                 Management</h5>
                             </div>
                             <div className="item">
-                                <img src={EM} alt="Image" />
+                                <img src={Monitization} alt="Image" />
                                 <h5>Monitization
                                 Strategies</h5>
                             </div>
                             <div className="item">
-                                <img src={EM} alt="Image" />
+                                <img src={pr} alt="Image" />
                                 <h5>Public
                                 Relations</h5>
                             </div>
                             <div className="item">
-                                <img src={EM} alt="Image" />
+                                <img src={rnd} alt="Image" />
                                 <h5>Research &
                                 Development</h5>
                             </div>
                             <div className="item">
-                                <img src={EM} alt="Image" />
+                                <img src={Marketing} alt="Image" />
                                 <h5>Marketing</h5>
                             </div>
                             <div className="item">
@@ -86,7 +89,7 @@ export const Skills = () => {
                                 Development</h5>
                             </div>
                             <div className="item">
-                                <img src={EM} alt="Image" />
+                                <img src={photo} alt="Image" />
                                 <h5>Photography &
                                 Videography</h5>
                             </div>
