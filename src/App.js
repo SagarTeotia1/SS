@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <div className="spline-background">
-      <Spline scene="https://prod.spline.design/ECtuXlsKcpMNgDQn/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/iZIQY7nZzMSUWoDH/scene.splinecode" />
     </div>
       <MouseFollower />
       <NavBar />
