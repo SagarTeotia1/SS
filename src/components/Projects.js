@@ -9,7 +9,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
-  const webProjects = [
+  const webProjects = [       //webinars
     {
       title: "Symposium",
       description: "Rotaract Club Event",
@@ -27,7 +27,7 @@ export const Projects = () => {
     },
   ];
 
-  const mobileProjects = [
+  const mobileProjects = [ // Competitions
     {
       title: "Mobile App 1",
       description: "Innovative Mobile Solution",
@@ -45,7 +45,7 @@ export const Projects = () => {
     },
   ];
 
-  const ecommerceProjects = [
+  const ecommerceProjects = [       //Summits
     {
       title: "E-commerce Platform",
       description: "Online Retail Solution",
@@ -71,18 +71,18 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Explore our diverse portfolio of projects and events across various domains</p>
+                <h2>Events</h2>
+                <p>Explore Events of Startupsphere!</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Web Development</Nav.Link>
+                      <Nav.Link eventKey="first">Webinars</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Mobile Apps</Nav.Link>
+                      <Nav.Link eventKey="second">Competition</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">E-commerce</Nav.Link>
+                      <Nav.Link eventKey="third">summits</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
