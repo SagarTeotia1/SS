@@ -568,8 +568,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-image: url('./assets/img/footer-bg.png'); */
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;g
-  opacity: 1;
+  background-repeat: no-repeat;
 }
 .newsletter-bx {
   background: #ffffffb2;
