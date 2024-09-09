@@ -1,57 +1,69 @@
+import React from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import projImg4 from "../assets/img/project-img4.png"; // Import new image
-import projImg5 from "../assets/img/project-img5.png"; // Import new image
-import projImg6 from "../assets/img/project-img6.png"; // Import new image
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-import React, { useEffect } from 'react';
-
-
-
-
 export const Projects = () => {
-
-  const projects = [
+  const webProjects = [
     {
-      title: "SYMPOSIUM",
-      description: "2 May 2024",
+      title: "Symposium",
+      description: "Rotaract Club Event",
       imgUrl: projImg1,
     },
     {
-      title: "FISH TANK",
-      description: "24 April 2024",
+      title: "Fish Tank",
+      description: "Startup Pitch Competition",
       imgUrl: projImg2,
     },
     {
-      title: "ROUND TABLE CONFERENCE",
-      description: "",
+      title: "Round Table Conference",
+      description: "Startup Ideas Event",
+      imgUrl: projImg3,
+    },
+  ];
+
+  const mobileProjects = [
+    {
+      title: "Mobile App 1",
+      description: "Innovative Mobile Solution",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Mobile App 2",
+      description: "User-Friendly Interface",
       imgUrl: projImg3,
     },
     {
-      title: "INVEST FUSION", // New project title
-      description: "25 April 2024",
-      imgUrl: projImg4,
+      title: "Mobile App 3",
+      description: "Cross-Platform Development",
+      imgUrl: projImg1,
+    },
+  ];
+
+  const ecommerceProjects = [
+    {
+      title: "E-commerce Platform",
+      description: "Online Retail Solution",
+      imgUrl: projImg3,
     },
     {
-      title: "HOW TO BUILD STARTUP", // New project title
-      description: "28 March 2024",
-      imgUrl: projImg5,
+      title: "Payment Gateway",
+      description: "Secure Transaction System",
+      imgUrl: projImg1,
     },
     {
-      title: "MARKETING & STARTUP", // New project title
-      description: "22 Octuber 2023",
-      imgUrl: projImg6,
-    }
+      title: "Inventory Management",
+      description: "Efficient Stock Control",
+      imgUrl: projImg2,
+    },
   ];
 
   return (
-    
     <section className="project" id="projects">
       <Container>
         <Row>
@@ -59,46 +71,40 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Events</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h2>Projects</h2>
+                <p>Explore our diverse portfolio of projects and events across various domains</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">All Projects</Nav.Link>
+                      <Nav.Link eventKey="first">Web Development</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Web Development</Nav.Link>
+                      <Nav.Link eventKey="second">Mobile Apps</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Design & UX</Nav.Link>
+                      <Nav.Link eventKey="third">E-commerce</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
-                        {
-                          projects.map((project, index) => (
-                            <Col key={index} sm={6} md={4}>
-                              <ProjectCard
-                                title={project.title}
-                                description={project.description}
-                                imgUrl={project.imgUrl}
-                              />
-                            </Col>
-                          ))
-                        }
+                        {webProjects.map((project, index) => (
+                          <ProjectCard key={index} {...project} />
+                        ))}
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Explore various web development projects that showcase innovative solutions and cutting-edge technologies.</p>
                       <Row>
-                        {/* Filter and display web development-related projects here */}
+                        {mobileProjects.map((project, index) => (
+                          <ProjectCard key={index} {...project} />
+                        ))}
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Discover creative design and UX projects that emphasize user experience and visual aesthetics.</p>
                       <Row>
-                        {/* Filter and display design & UX-related projects here */}
+                        {ecommerceProjects.map((project, index) => (
+                          <ProjectCard key={index} {...project} />
+                        ))}
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>
@@ -108,7 +114,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background"></img>
+      <img className="background-image-right" src={colorSharp2} alt="Background" />
     </section>
-  )
-}
+  );
+};
